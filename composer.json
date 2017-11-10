@@ -1,0 +1,6 @@
+{
+    "require": {
+        "composer/composer": "^1.5",
+        "social-links/social-links": "^1.13"
+    }
+}
