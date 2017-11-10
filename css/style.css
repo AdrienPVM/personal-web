@@ -16,7 +16,6 @@ body {
 
 #card {
   position: relative;
-  background-color: grey;
   display: block;
   width: 30rem;
   height: 12rem;
@@ -69,6 +68,10 @@ body {
 
 .card {
   background-color: red;
+}
+
+.card2 {
+  background-color: blue;
 }
  
 

@@ -21,12 +21,11 @@
             <section id="inner_arrow">
                 <div id="shape_middleLine"></div>
                 <div id="cards">
+                    <?php $i=0; ?>
                     <?php foreach ($result as $article) { ?>
-                        <?php $i=0; ?>
                         <?php $i++; ?>
-                        <?php if ($i%2==2) { ?>
-                            <?php $i=0; ?>
-                             <section id="card" class="card">
+                        <?php if ($i%2==1) { ?>
+                            <section id="card" class="card">
 
 
                         <?php } else { ?>
