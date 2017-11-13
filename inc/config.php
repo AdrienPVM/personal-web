@@ -14,15 +14,15 @@ $config=array(
 require_once __DIR__.'/../inc/db.php';
 require_once __DIR__.'/../inc/functions.php';
 //Inclusion de composer
-require_once __DIR__.'/../vendor/autoload.php';
+//require_once __DIR__.'/../vendor/autoload.php';
 
 //Social Networks
 //Create a Page instance with the url information
-$socialLinksPage = new SocialLinks\Page([
+/*$socialLinksPage = new SocialLinks\Page([
     'url' => 'http://projet-toto.dev',
     'title' => 'Projet-toto',
     'text' => 'Extended page description',
     'image' => 'http://mypage.com/image.png',
     'icon' => 'http://mypage.com/favicon.png',
     'twitterUser' => '@twitterUser'
-]);
+]);*/
