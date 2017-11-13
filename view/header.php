@@ -18,6 +18,7 @@
     <meta name="author" content="AdrienPVM">
 
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../flipster/dist/jquery.flipster.min.css">
     <link rel="stylesheet" href="../css/style.css">
@@ -30,11 +31,14 @@
     <div>
         <header>
             <nav>
-                <a href="portfolio.php">Portfolio</a>
-                <a href="contact.php">Contact</a>
+                <a id="linkPortfolio" href="portfolio.php">Portfolio</a>
+                <a id="linkContact" href="contact.php">Contact</a>
             </nav>
             <div id="shape_profile">
-                <img src="/../img/profile.jpg" alt="This is my profile picture">
+                <a href="index.php">
+
+                    <img src="../img/profile.jpg" alt="This is my profile picture">
+                </a>
             </div>
         </header>
         <main>
