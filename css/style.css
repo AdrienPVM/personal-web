@@ -4,7 +4,7 @@
 }
 
 body {
-  background: url("https://static.pexels.com/photos/29435/landscape-sky-night-stars-29435.jpg");
+  background: url("../img/background.jpg");
   background-position: top;
   background-repeat: no-repeat;
   padding: 1.5rem 0 0 0;
