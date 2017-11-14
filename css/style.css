@@ -474,6 +474,13 @@ footer span a {
   }
 }
 
+@media screen and (max-width: 769px) {
+  #portfolio article {
+    width: 10rem;
+    height: 10rem;
+  }
+}
+
 .button {
   background: none;
   border: 0;
