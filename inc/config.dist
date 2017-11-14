@@ -1,0 +1,28 @@
+<?php
+//Données de configuration
+$config=array(
+    'DB_HOST'=>'',
+    'DB_USER'=>'',
+    'DB_PASSWORD'=>'',
+    'DB_DATABASE'=>'',
+    'MAIL_HOST' => '',
+    'MAIL_USERNAME' => '',
+    'MAIL_PASSWORD' => ''
+);
+
+//Inclusions de fichiers
+require_once __DIR__.'/../inc/db.php';
+require_once __DIR__.'/../inc/functions.php';
+//Inclusion de composer
+require_once __DIR__.'/../vendor/autoload.php';
+
+//Social Networks
+//Create a Page instance with the url information
+/*$socialLinksPage = new SocialLinks\Page([
+    'url' => 'localhost',
+    'title' => 'Projet-toto',
+    'text' => 'Extended page description',
+    'image' => 'http://mypage.com/image.png',
+    'icon' => 'http://mypage.com/favicon.png',
+    'twitterUser' => '@twitterUser'
+]);*/

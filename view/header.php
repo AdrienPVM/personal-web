@@ -25,18 +25,18 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="../flipster/dist/jquery.flipster.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="../js/script.js"></script>
 </head>
 <body>
     <div>
         <header>
             <nav>
-                <a id="linkPortfolio" href="portfolio.php">Portfolio</a>
-                <a id="linkContact" href="contact.php">Contact</a>
+                <a id="linkPortfolio" class="draw button" href="portfolio.php">Portfolio</a>
+                <a id="linkContact" class="draw button" href="contact.php">Contact</a>
             </nav>
             <div id="shape_profile">
                 <a href="index.php">
-
                     <img src="../img/profile.jpg" alt="This is my profile picture">
                 </a>
             </div>

@@ -50,6 +50,10 @@ nav #linkContact {
   left: 33rem;
 }
 
+#content {
+  position: relative;
+}
+
 #presentation {
   text-align: center;
   color: white;
@@ -327,13 +331,16 @@ footer span a {
   justify-content: space-around;
 }
 
+#portfolio article:hover #imgInfo {
+  top: 1%;
+}
+
 #portfolio article {
   position: relative;
   width: 15rem;
   height: 15rem;
   background: black;
   padding: 0.5rem;
-  border: 2px solid rgba(255, 255, 255, 0.9);
   margin: 0.5rem;
   overflow: hidden;
 }
@@ -341,27 +348,31 @@ footer span a {
 #portfolio article img {
   width: 100%;
   height: 100%;
+  border-radius: 5px;
+  z-index: -1;
 }
 
-#portfolio article div {
+#portfolio article #imgInfo {
+  box-shadow: inset 0 0 40px black;
+  transition-duration: 0.5s;
   padding: 6rem 1rem 1rem 1rem;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.4);
   position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
+  height: 99%;
+  width: 99%;
+  top: 100%;
   left: 0;
   color: white;
   text-shadow: 0 0 10px black;
+  text-align: center;
 }
 
-#portfolio article div .portfolioTitle {
-  text-align: center;
+#portfolio article #imgInfo .portfolioTitle {
   font-size: 1.5rem;
   margin: 0.5rem 0;
 }
 
-#portfolio article div .portfolioText {
+#portfolio article #imgInfo .portfolioText {
   display: block;
   width: 100%;
 }
@@ -461,6 +472,65 @@ footer span a {
     margin-top: 2rem;
     margin-bottom: 5rem;
   }
+}
+
+.button {
+  background: none;
+  border: 0;
+  box-sizing: border-box;
+  box-shadow: inset 0 0 0 2px white;
+  color: white;
+  vertical-align: middle;
+}
+
+.button::before, .button::after {
+  box-sizing: inherit;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.draw {
+  transition: color 0.25s;
+}
+
+.draw::before, .draw::after {
+  border: 2px solid transparent;
+  width: 0;
+  height: 0;
+}
+
+.draw::before {
+  top: 0;
+  left: 0;
+}
+
+.draw::after {
+  bottom: 0;
+  right: 0;
+}
+
+.draw:hover {
+  text-shadow: 0 0 30px #00caac;
+  color: white;
+}
+
+.draw:hover::before, .draw:hover::after {
+  width: 100%;
+  height: 100%;
+}
+
+.draw:hover::before {
+  border-top-color: #5fd0d4;
+  border-right-color: #5fd0d4;
+  transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+}
+
+.draw:hover::after {
+  border-bottom-color: #5fd0d4;
+  border-left-color: #5fd0d4;
+  transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
 }
  
 

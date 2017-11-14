@@ -14,7 +14,7 @@
                 </article>
             </section>
 
-            <section>
+            <section id="content">
                 <div class="arrowUp"></div>
                 <section id="inner_arrow">
                     <div id="shape_middleLine"></div>
