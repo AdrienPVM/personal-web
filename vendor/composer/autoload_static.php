@@ -27,6 +27,7 @@ class ComposerStaticInitac1928a01633978c1d449f4fca2bd41e
         'P' => 
         array (
             'Psr\\Log\\' => 8,
+            'PHPMailer\\PHPMailer\\' => 20,
         ),
         'J' => 
         array (
@@ -85,6 +86,10 @@ class ComposerStaticInitac1928a01633978c1d449f4fca2bd41e
         'Psr\\Log\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
+        ),
+        'PHPMailer\\PHPMailer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
         ),
         'JsonSchema\\' => 
         array (

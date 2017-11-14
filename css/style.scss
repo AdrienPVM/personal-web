@@ -12,21 +12,21 @@ body {
 }
 
 header {
-    margin: 0;
+    margin-top: -5.5rem;
     padding: 0;
 }
 
 nav {
     text-align: center;
-    position: absolute;
+    position: relative;
     width: 100%;
-    justify-content: space-around;
-    display: flex;
-    margin: 4.5rem 0 0 0;
+    margin: 0;
+    top: 12.5rem;
     height: 6rem;
     background: rgba(0, 0, 0, 0.5);
     box-shadow: 0 0 30px rgba(255, 255, 255, 0.15);
     a {
+        position: absolute;
         font-size: 1.5rem;
         color: white;
         border: 1px solid white;
@@ -35,13 +35,15 @@ nav {
         height: 3rem;
         line-height: 3rem;
         z-index: 2;
-        margin: auto 0;
+        margin: 1.5rem auto;
+        left: 0;
+        right: 0;
     }
     #linkPortfolio {
-        margin-left: 20rem;
+        right: 33rem;
     }
     #linkContact {
-        margin-right: 20rem;
+        left: 33rem;
     }
 }
 
@@ -110,7 +112,7 @@ nav {
     #shape_middleLine {
         height: 95%;
         width: 0.3rem;
-        background: linear-gradient(white 91%, black);
+        background: linear-gradient(white 96%, black);
         position: absolute;
         top: 6.5rem;
         left: 0;
@@ -155,7 +157,7 @@ nav {
 }
 
 .card2 {
-    background: linear-gradient(rgb(51, 51, 51), rgb(81, 255, 81));
+    background: linear-gradient(rgb(51, 51, 51), rgb(81, 255, 203));
     left: 0;
 }
 
@@ -208,7 +210,7 @@ nav {
 
 footer {
     position: fixed;
-    width: 100%;
+    width: 100vw;
     bottom: 0;
     margin: 1rem auto 0 auto;
     padding: 1rem;
@@ -227,8 +229,9 @@ footer {
 //////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////
-
-#contactForm,#addForm {
+#contactForm,
+#addForm,
+#addFormPortfolio {
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -248,20 +251,40 @@ footer {
         border: none;
         box-shadow: 0 0 20px black;
     }
-    .textarea{
+    .textarea {
         border-radius: 20px;
+        resize: none;
+        overflow-y: auto;
     }
-    .submit{
+    .submit {
         width: 7rem;
+        cursor: pointer;
     }
 }
-#addForm{
+
+#contactSent {
+    display: block;
+    max-width: 30rem;
+    margin: 6rem auto 0 auto;
+    text-align: center;
+    padding: 2rem 5rem;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    border: 1.5px solid white;
+    box-shadow: 0 0 10px black;
+    text-shadow: 0 0 10px black;
+}
+
+#addForm,
+#addFormPortfolio {
     border: 0.5rem double white;
     border-radius: 40px;
     padding: 1rem;
     box-shadow: 0 0 40px black;
     background: rgba(0, 0, 0, 0.3);
-    label{
+    label {
         color: white;
         font-size: 1.5rem;
         width: 100%;
@@ -271,3 +294,143 @@ footer {
         margin-bottom: 1rem;
     }
 }
+
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+#portfolio {
+    max-width: 80rem;
+    margin: 4rem auto 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    article {
+        position: relative;
+        width: 15rem;
+        height: 15rem;
+        background: rgb(0, 0, 0);
+        padding: 0.5rem;
+        border: 2px solid rgba(255, 255, 255, 0.9);
+        margin: 0.5rem;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        div {
+            padding: 6rem 1rem 1rem 1rem;
+            background: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            color: white;
+            text-shadow: 0 0 10px black;
+            .portfolioTitle {
+                text-align: center;
+                font-size: 1.5rem;
+                margin: 0.5rem 0;
+            }
+            .portfolioText {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    header {
+        margin-top: -7rem;
+    }
+    nav {
+        width: 100vw;
+        margin: 0;
+        top: 9.5rem;
+        height: 6rem;
+        display: inline-flex;
+        justify-content: space-around;
+        a {
+            position: absolute;
+            margin: 0 auto;
+            font-size: 1.5rem;
+            color: white;
+            border: 1px solid white;
+            text-decoration: none;
+            width: 8rem;
+            height: 2.8rem;
+            line-height: 2.8rem;
+            z-index: 2;
+            top: -3.5rem;
+        }
+        #linkPortfolio {
+            left: 0.7rem;
+            right: auto;
+        }
+        #linkContact {
+            right: 0.7rem;
+            left: auto;
+        }
+    }
+    #shape_profile {
+        width: 9rem;
+        height: 9rem;
+        overflow: hidden;
+        position: relative;
+        transform: rotate(45deg);
+        margin: 2rem auto;
+        border: 7px solid black;
+        border-left-width: 3px;
+        border-right-width: 3px;
+        box-shadow: 0 0 50px 5px rgba(255, 255, 255, 0.3);
+        img {
+            filter: grayscale(60%) brightness(120%) saturate(120%);
+            transform: rotate(-45deg) translateY(-22%);
+            width: 150%;
+            height: 150%;
+        }
+    }
+    #presentation {
+        margin: -4rem auto 0 auto;
+        h1 {
+            font-size: 4rem;
+        }
+        p {
+            padding: 0.5rem;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            text-shadow: 0 0 20px black;
+        }
+    }
+    #contactImg {
+        display: none;
+    }
+    #inner_arrow {
+        padding: 0;
+    }
+    #cards {
+        width: 90%;
+        .card {
+            right: auto;
+        }
+        .card2 {
+            left: auto;
+        }
+    }
+    #card {
+        width: 100%;
+    }
+} //do not delete
+@media screen and (max-width: 1119px) {
+    .arrowUp {
+        display: none;
+    }
+    #cards {
+        margin: 0 auto;
+        margin-top: 1rem;
+        #card {
+            margin-top: 2rem;
+            margin-bottom: 5rem;
+        }
+    }
+} //do not delete
